@@ -1,0 +1,12 @@
+- question: What is IOPS?
+  answer: >
+    I/O Operations Per Second. Makes sence when used with latency
+
+- question: Bandwidth or Throughput?
+  answer: IOPS * avg request size
+
+- question: latency?
+  answer: Time taken for a I/O request to be complete. We start our measurement from the moment the request is issued to the storage layer and stop measuring when either we get the requested data or get confirmation that the data is stored on disk
+
+- question: EBS?
+  answer: Elastic Block store
