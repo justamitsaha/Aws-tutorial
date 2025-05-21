@@ -9,4 +9,14 @@
   answer: Time taken for a I/O request to be complete. We start our measurement from the moment the request is issued to the storage layer and stop measuring when either we get the requested data or get confirmation that the data is stored on disk
 
 - question: EBS?
-  answer: Elastic Block store
+  answer: Elastic Block store. It is a block level storage service. It is used to store data in the form of blocks. It is used to store data for EC2 instances. It is used to store data for RDS instances. It is used to store data for Redshift instances. It is used to store data for ElastiCache instances. It is used to store data for EMR instances. It is used to store data for Lambda functions. It is used to store data for ECS tasks. It is used to store data for EKS pods. It is used to store data for Fargate tasks.
+
+- question: EBS characteristics?
+  answer: >
+    EBS volumes are automatically replicated within their Availability Zone to protect from component failure, offering high availability and durability.  EBS volumes are designed for 99.999% availability.  EBS volumes can be attached to any EC2 instance in the same Availability Zone.  EBS volumes can be detached from one instance and attached to another instance in the same Availability Zone.  EBS volumes can be backed up to S3 using snapshots.  EBS volumes can be encrypted using AWS Key Management Service (KMS).
+
+- question: Can EBS volumes be attached to multiple instances?
+  answer: >
+    No, EBS volumes can only be attached to one instance at a time. 
+
+- question: Types of E
