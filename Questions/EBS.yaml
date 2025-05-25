@@ -3,20 +3,53 @@
     I/O Operations Per Second. Makes sence when used with latency
 
 - question: Bandwidth or Throughput?
-  answer: IOPS * avg request size
+  answer: >
+    IOPS * avg request size
 
 - question: latency?
-  answer: Time taken for a I/O request to be complete. We start our measurement from the moment the request is issued to the storage layer and stop measuring when either we get the requested data or get confirmation that the data is stored on disk
+  answer: >
+    Time taken for a I/O request to be complete. We start our measurement from the moment the request is issued to the storage layer and stop measuring when either we get the requested data or get confirmation that the data is stored on disk
 
 - question: EBS?
-  answer: Elastic Block store. It is a block level storage service. It is used to store data in the form of blocks. It is used to store data for EC2 instances. It is used to store data for RDS instances. It is used to store data for Redshift instances. It is used to store data for ElastiCache instances. It is used to store data for EMR instances. It is used to store data for Lambda functions. It is used to store data for ECS tasks. It is used to store data for EKS pods. It is used to store data for Fargate tasks.
+  answer: Elastic Block store. It is a network storage to store data in the form of blocks. 
 
-- question: EBS characteristics?
+- question: Use case for ESB?
   answer: >
-    EBS volumes are automatically replicated within their Availability Zone to protect from component failure, offering high availability and durability.  EBS volumes are designed for 99.999% availability.  EBS volumes can be attached to any EC2 instance in the same Availability Zone.  EBS volumes can be detached from one instance and attached to another instance in the same Availability Zone.  EBS volumes can be backed up to S3 using snapshots.  EBS volumes can be encrypted using AWS Key Management Service (KMS).
+    It is used to store data for 
+    EC2 instances,
+    RDS instances,
+    Redshift instances, 
+    ElastiCache instances,
+    Lambda functions, 
+    ECS tasks, 
+    EKS pods, 
+    Fargate tasks.
+
+- question: How to persist EC2 data?
+  answer: >
+    Use ESB to persist data
 
 - question: Can EBS volumes be attached to multiple instances?
   answer: >
     No, EBS volumes can only be attached to one instance at a time. 
 
-- question: Types of E
+- question: Can we mount ESB from one region on EC2 on another?
+  answer: >
+    No EBS is locked to region
+
+- question: If we want to stay in Free tier how much ESB can we provision?
+  answer: >
+    30 GB gp2/gp3 SSD
+
+- question: Our EC2 instance is running critical job on ESB is having hardward issue? What to do?
+  answer: > 
+    ESB can be reattached quickly to another instance
+
+- question: How to attach our citical data on ESB to another EC2 on another region
+  answer: > 
+    Create spanshot move snapshot to another region and recreate ESB in another region
+
+- question: Can EBS be terminated on EC2 termination?
+  answer: > 
+    Yes with Delete on Termination attribute both root and ESB termination  can be controilled      
+
