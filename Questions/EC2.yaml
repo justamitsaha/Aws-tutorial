@@ -1,0 +1,16 @@
+- question: How do we select region for EC2?
+  answer: >
+    Closer region for less latency
+    Any compliance requirement to stay in a region
+    Cost associated to a region
+    Services available in a region
+
+- question: How EC2 user data gain permission to download files, install software, execute script?
+  answer: >
+    It runs with root user privilege
+
+- question: What does m5.2xlarge denote?
+  answer: >
+    m is instance class, 5 is generation, rest denotes the placement wrt. performance of other servers in same instance class
+
+- question: 
