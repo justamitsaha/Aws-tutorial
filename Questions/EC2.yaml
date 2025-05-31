@@ -13,4 +13,8 @@
   answer: >
     m is instance class, 5 is generation, rest denotes the placement wrt. performance of other servers in same instance class
 
-- question: 
+- question: What are the characteristic of Genral pourpose instance?
+  answer: > 
+    It balances between memory, compute and Network
+
+- question: Which type of machines are best for batch job, media transcoding
