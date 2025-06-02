@@ -13,8 +13,41 @@
   answer: >
     m is instance class, 5 is generation, rest denotes the placement wrt. performance of other servers in same instance class
 
-- question: What are the characteristic of Genral pourpose instance?
+- question: What are the characteristic of General purpose instance?
   answer: > 
-    It balances between memory, compute and Network
+    It balances between memory, compute and Network to give optimized performance
 
-- question: Which type of machines are best for batch job, media transcoding
+- question: Which type of machines are best for batch job, media transcoding, High performance web servers, 	High performance computing (HPC), Scientific modelling & machine learning, Gaming servers
+  answer: >
+    Compute optimized, instance it has high performance processors: Starts with C
+
+- question: Which type of machines are best for High performance, relational/non-relational databases, 	Distributed web scale cache stores, In-memory databases optimized for BI (business intelligence), Applications performing real-time processing of big unstructured data
+  answer: >
+    Memory optimized it can process large data sets in memory
+
+- question: Which type of machines are best for High frequency online transaction processing (OLTP) systems, Relational & NoSQL databases, Cache for in-memory databases (for example, Redis), Data warehousing applications, Distributed file systems
+  answer: >
+    Memory optimized it can process large data sets in memory
+
+- question: If your application is facing time out issue, what could be the probable reason?
+  answer: >
+    Security group issue
+
+- question: What is the configuration of default security Group?
+  answer: >
+    All out bound traffic allowed, no inbound traffic allowed
+
+- question: What kind of instance is good when there is no long term commitment and short term work load?
+  answer: >
+    On demand Instance
+
+- question: Say you want to run Database on EC2. What kind of purchasing option you should look for?
+  answer: >
+    Since DB are for long term, should go for Reserved instance for 1 - 3 years
+
+- question: Can we change the instance types in Reserved instance?
+  answer: >
+    No
+
+- question: I want to run my instance for long term. But not sure about the finance types. Which purchasing option should I go for?
+  answer: Savings Plan
