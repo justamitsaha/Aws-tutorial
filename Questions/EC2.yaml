@@ -1,9 +1,6 @@
 - question: How do we select region for EC2?
   answer: >
-    Closer region for less latency
-    Any compliance requirement to stay in a region
-    Cost associated to a region
-    Services available in a region
+    Closer region for less latency Any compliance requirement to stay in a region Cost associated to a region Services available in a region
 
 - question: How EC2 user data gain permission to download files, install software, execute script?
   answer: >
@@ -14,7 +11,7 @@
     m is instance class, 5 is generation, rest denotes the placement wrt. performance of other servers in same instance class
 
 - question: What are the characteristic of General purpose instance?
-  answer: > 
+  answer: >
     It balances between memory, compute and Network to give optimized performance
 
 - question: Which type of machines are best for batch job, media transcoding, High performance web servers, 	High performance computing (HPC), Scientific modelling & machine learning, Gaming servers
@@ -45,9 +42,17 @@
   answer: >
     Since DB are for long term, should go for Reserved instance for 1 - 3 years
 
-- question: Can we change the instance types in Reserved instance?
+- question: Can we change the instance types or region in Reserved instance?
   answer: >
     No
 
-- question: I want to run my instance for long term. But not sure about the finance types. Which purchasing option should I go for?
+- question: I want to run my instance for long term. But not sure about the instance types. Which purchasing option should I go for?
   answer: Savings Plan
+
+- questions: Changes like us-east-1a → us-east-1b  and m5.large → m5.xlarge (or split into 2x m5.medium) allowed for Reserved instance?
+  answer: Yes, changes in same region and same instance class is allowed
+
+- questions: Changes like c5.large-> r5.large-> t3.xlarge  and us-east-1 to eu-west-1 allowed for Reserved instance?
+  answer: No, changes to different region and different instance class is not allowed in Reserved instance. It is possible in Savings Plan
+
+- questions:
