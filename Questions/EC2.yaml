@@ -49,10 +49,68 @@
 - question: I want to run my instance for long term. But not sure about the instance types. Which purchasing option should I go for?
   answer: Savings Plan
 
-- questions: Changes like us-east-1a → us-east-1b  and m5.large → m5.xlarge (or split into 2x m5.medium) allowed for Reserved instance?
+- question: Changes like us-east-1a → us-east-1b  and m5.large → m5.xlarge (or split into 2x m5.medium) allowed for Reserved instance?
   answer: Yes, changes in same region and same instance class is allowed
 
-- questions: Changes like c5.large-> r5.large-> t3.xlarge  and us-east-1 to eu-west-1 allowed for Reserved instance?
+- question: Changes like c5.large-> r5.large-> t3.xlarge  and us-east-1 to eu-west-1 allowed for Reserved instance?
   answer: No, changes to different region and different instance class is not allowed in Reserved instance. It is possible in Savings Plan
 
-- questions:
+- question: You are running a web application on EC2. You want to ensure that your application can handle sudden spikes in traffic without any downtime. Which purchasing option should you consider?
+  answer: >
+    On-Demand Instances, as they allow you to quickly scale up or down based on traffic demands without long-term commitments.
+
+- question: You are running an application that requires a consistent level of performance and you can predict your usage patterns. Which purchasing option should you consider?
+  answer: >
+    Reserved Instances, as they provide a significant discount compared to On-Demand pricing in exchange for a commitment to use the instance for a one or three-year term.
+
+- question: You are running a workload that requires a high level of flexibility and you want to take advantage of the lowest prices available. Which purchasing option should you consider?
+  answer: >
+    Savings Plans, as they offer the most flexibility in terms of instance types and regions while providing significant savings over On-Demand pricing.
+
+- question: you are running an application whihc doesn't need a time commitment and you want to minimize costs. Which purchasing option should you consider?
+  answer: >
+    Spot Instances, as they allow you to bid on unused EC2 capacity at potentially lower prices, but with the risk of interruption.
+
+- question: You are running a batch processing job that can be interrupted and you want to take advantage of the lowest prices available. Which purchasing option should you consider?
+  answer: >
+    Spot Instances, as they allow you to take advantage of unused EC2 capacity at potentially lower prices, making them ideal for batch processing jobs that can tolerate interruptions.
+
+- question: How do you make sure that your spot instance is not interrupted?
+  answer: >
+    You can use Spot Fleet or Spot Instance Requests with a maximum price set to ensure that your instance is not interrupted unless the spot price exceeds your maximum price.
+
+- question: Can you stop and restart a Spot Instance like an On-Demand instance?
+  answer: >
+    No, Spot Instances cannot be stopped and restarted like On-Demand instances. They can only be terminated and launched again as new instances.
+
+- question: How do you make sure that your spot instance is stopped permanently and not getting provisioned again?
+  answer: >
+    Use a one-time Spot request instead of a persistent one. Also, ensure the instance is not part of a Spot Fleet or Auto Scaling Group, as these can automatically re-provision terminated instances.
+
+- question: How to terminate all instance is a persistent Spot request?
+  answer: >
+    Cancel the Spot Request to prevent AWS from relaunching instances Terminate the Spot Instance to free up resources.
+
+- question: Say we want stability for 20% of the time and flexibility for 80% of the time. Which purchasing option should we consider?
+  answer: >
+    Use spot request  80% Spot capacity 20% On-Demand capacity (for stability)
+
+- question: can we user Reserved instance or Reserved capacity for spot request?
+  answer: >
+    No, Reserved Instances and Reserved Capacity cannot be used for Spot Requests. They are separate purchasing options designed for different use cases.
+
+- question: What is the difference between Dedicated Instances and Dedicated Hosts?
+  answer: >
+    Dedicated Instances run on hardware that is physically dedicated to a single customer, but you don’t have visibility or control over the exact host or instance placement. Dedicated Hosts, on the other hand, provide physical servers fully dedicated to your use, giving you control over instance placement, allowing license compliance (e.g., for BYOL like Windows or Oracle)   
+
+- question: What is capacity reservation?
+  answer: >
+    Capacity Reservation allows you to reserve capacity for your EC2 instances in a specific Availability Zone, ensuring that you have the required resources available when you need them, even during peak demand periods.
+
+- question: How does capacity reservation differ from On-Demand Instances?
+  answer: >
+    Capacity Reservation guarantees that you have the capacity available in a specific Availability Zone, while On-Demand Instances allow you to launch instances without any reservation but do not guarantee capacity during peak demand. Capacity Reservations can be used in conjunction with On-Demand Instances to ensure availability. 
+
+- question: If I don't launch an instance in a capacity reservation, will I be charged for it?
+  answer: >
+    No, you are not charged for the capacity reservation itself unless you launch instances into it. You only pay for the instances that you launch within the reserved capacity.
