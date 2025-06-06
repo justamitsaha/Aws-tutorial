@@ -114,3 +114,25 @@
 - question: If I don't launch an instance in a capacity reservation, will I be charged for it?
   answer: >
     No, you are not charged for the capacity reservation itself unless you launch instances into it. You only pay for the instances that you launch within the reserved capacity.
+
+- question: Do we have any control over how the EC2 instances are getting placed relative to each other?
+  answer: >
+    No we directly can't control placement of instances but we can get relative placement using Placement groups.
+
+- question: what should we do to places instances close together within a single Availability Zone?
+  answer: >
+    We need to place instance in Cluster placement group
+
+- question: what should we do ensure maximum High availability and fault tolerance for our EC2 instance?
+  answer: >
+    We should use spread placement group for our EC2 instances
+
+- question: How should we place large no of instance with HA (scalability with fault tolerance)?
+  answer: > 
+    We should use Partition placement group
+
+- question: How partition placement group instances are arranged?
+  answer: >
+    Divides each group into partitions (logical groups). Each partition is isolated from others, with its own set of hardware (rack).
+
+- question: If we want to set     
