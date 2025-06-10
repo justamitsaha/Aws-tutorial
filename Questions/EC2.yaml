@@ -135,4 +135,6 @@
   answer: >
     Divides each group into partitions (logical groups). Each partition is isolated from others, with its own set of hardware (rack).
 
-- question: If we want to set     
+- question: If we want to set up hadoop or Kafka with very large cluster which placement group should we choose?
+  answer: >
+    We should use partition placement group, which would allow us to scale with fault tolerance.
